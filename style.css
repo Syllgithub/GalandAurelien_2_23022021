@@ -365,3 +365,72 @@ input:nth-child(3):focus {
   font-size: 20px;
   padding: 0;
 }
+
+#popGeneral {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 500px;
+}
+
+.popCont {
+  display: flex;
+  border: 1px solid black;
+  justify-content: center;
+}
+
+.popDesc p {
+  margin: 0;
+  padding: 0;
+}
+.popDesc p:nth-child(1) {
+  border: 1px solid black;
+  font-family: "Raleway-bold";
+}
+
+.popDesc p:nth-child(2) {
+  border: 1px solid black;
+  font-family: "Raleway-light";
+  font-size: 14px;
+}
+
+.popPhoto {
+  border: 5px solid white;
+  border-radius: 20px 0px 0px 20px;
+  width: 130px;
+  height: 135px;
+}
+
+.popDesc {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  background: white;
+  width: 210px;
+  height: 145px;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.popCont div:last-child {
+  align-self: flex-end;
+}
+
+#solmPhoto {
+  background: url("media/images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg")
+    no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+#acdlPhoto {
+  background: url("media/images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg")
+    no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+#hbbPhoto {
+  background: url("media/images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg")
+    no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
