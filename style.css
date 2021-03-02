@@ -221,22 +221,15 @@ input:nth-child(3):focus {
 #hebGeneral {
   flex-wrap: wrap;
   display: flex;
-  justify-content: flex-start;
-}
-#hebGeneral button {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  text-align: left;
-  cursor: pointer;
+  justify-content: space-evenly;
+  row-gap: 35px;
+  padding-bottom: 40px;
 }
 
-.hebCont {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 35px;
-  padding-bottom: 35px;
+.hebCont:hover {
+  box-shadow: 0px 0px 10px grey;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .hebPhoto {
@@ -258,59 +251,46 @@ input:nth-child(3):focus {
   color: black;
 }
 
-button:hover .hebPhoto {
-  /* border: 5px solid #0065fc;
-  border-bottom: 0;*/
-  box-shadow: 0px -5px 10px grey;
-}
-button:hover .hebDesc {
-  /*border: 5px solid #0065fc;
-  background-color: #0065fc;
-  color: white;*/
-  box-shadow: 0px 5px 10px grey;
-}
-
 .hebDesc p {
   font-family: "Raleway-semibold";
-  list-style: none;
   padding-left: 10px;
   font-size: 14px;
   margin: 0;
 }
 #canPhoto {
-  background: url("media/images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg")
+  background: url("media/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg")
     no-repeat;
   background-size: cover;
   background-position: 50%;
 }
 
 #hpPhoto {
-  background: url("media/images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg")
+  background: url("media/images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg")
     no-repeat;
   background-size: cover;
   background-position: 50%;
 }
 #hmPhoto {
-  background: url("media/images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg")
+  background: url("media/images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg")
     no-repeat;
   background-size: cover;
   background-position: 50%;
 }
 #hmePhoto {
-  background: url("media/images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg")
+  background: url("media/images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg")
     no-repeat;
   background-size: cover;
   background-position: 50%;
 }
 #panPhoto {
-  background: url("media/images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg")
+  background: url("media/images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg")
     no-repeat;
   background-size: cover;
   background-position: 50%;
 }
 
 #haPhoto {
-  background: url("media/images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg")
+  background: url("media/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg")
     no-repeat;
   background-size: cover;
   background-position: 50%;
@@ -321,7 +301,7 @@ button:hover .hebDesc {
 }
 .hebCont p:nth-child(1) {
   font-family: "Raleway-bold";
-  font-size: 16px;
+  font-size: 15px;
   padding-bottom: 4px;
 }
 
@@ -363,4 +343,25 @@ button:hover .hebDesc {
 #hebHp i,
 #hebHa i {
   color: #0065fc;
+}
+
+#hebergementsMarseille a {
+  text-decoration: none;
+  font-family: "Raleway-semibold";
+  font-size: 16px;
+  padding-left: 40px;
+  color: black;
+}
+#titreIconePop {
+  padding-left: 40px;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+#titreIconePop h2 {
+  font-family: "Raleway-semibold";
+  font-size: 20px;
+  padding: 0;
 }
