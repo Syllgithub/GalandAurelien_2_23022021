@@ -21,8 +21,18 @@
 @media screen and (max-width: 900px) {
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: "Raleway";
+}
+
+#blocComplet {
+  width: 1440px;
+  margin: auto;
 }
 
 #blocPage {
@@ -155,6 +165,7 @@ input:nth-child(3):focus {
 }
 
 #filtres a:hover {
+  transition: all 0.3s ease-out;
   color: white;
   background-color: #0065fc;
   border-top: 2px #deebff solid;
@@ -227,6 +238,7 @@ input:nth-child(3):focus {
 }
 
 .hebCont:hover {
+  transition: all 0.4s ease-out;
   box-shadow: 0px 0px 10px grey;
   border-radius: 20px;
   cursor: pointer;
@@ -367,17 +379,26 @@ input:nth-child(3):focus {
 }
 
 #popGeneral {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 500px;
+  row-gap: 30px;
 }
 
 .popCont {
   display: flex;
-  border: 1px solid black;
   justify-content: center;
+  width: 345px;
+  margin: auto;
+  box-shadow: 0px 0px 10px #d9d9d9;
+  border-radius: 20px;
+}
+
+.popCont:hover {
+  transition: all 0.4s ease-out;
+  box-shadow: 0px 0px 20px grey;
+  cursor: pointer;
 }
 
 .popDesc p {
@@ -385,35 +406,45 @@ input:nth-child(3):focus {
   padding: 0;
 }
 .popDesc p:nth-child(1) {
-  border: 1px solid black;
+  padding-top: 15px;
+  font-size: 15px;
+  padding-left: 5px;
   font-family: "Raleway-bold";
 }
 
 .popDesc p:nth-child(2) {
-  border: 1px solid black;
+  padding-left: 5px;
   font-family: "Raleway-light";
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 30px;
 }
 
 .popPhoto {
   border: 5px solid white;
   border-radius: 20px 0px 0px 20px;
   width: 130px;
-  height: 135px;
+  height: 130px;
 }
 
 .popDesc {
   display: flex;
   flex-direction: column;
-  align-content: flex-start;
+  justify-content: flex-start;
   background: white;
   width: 210px;
-  height: 145px;
+  height: 140px;
   border-radius: 0px 20px 20px 0px;
 }
 
-.popCont div:last-child {
-  align-self: flex-end;
+.popCont strong {
+  font-family: "Raleway-semibold";
+}
+
+.popCont div {
+  margin-top: auto;
+  padding-left: 5px;
+
+  padding-bottom: 5px;
 }
 
 #solmPhoto {
@@ -433,4 +464,166 @@ input:nth-child(3):focus {
     no-repeat;
   background-size: cover;
   background-position: 50%;
+}
+
+#popSolm i,
+#popAcdl i,
+#popHbb i {
+  color: #0065fc;
+}
+
+#popAcdl i:last-child,
+#popHbb i:last-child {
+  color: #d9d9d9;
+}
+
+#activites {
+  margin-top: 60px;
+  height: 100%;
+}
+
+#activites h1 {
+  font-family: "Raleway-semibold";
+  font-size: 20px;
+}
+
+#actGeneral {
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#activitesP1,
+#activitesP2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-between;
+  row-gap: 41px;
+  height: 445px;
+  width: 48.5%;
+}
+
+.actCont {
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px #d9d9d9;
+  cursor: pointer;
+}
+.actCont:hover {
+  transition: all 0.4s ease-out;
+  box-shadow: 0px 0px 20px grey;
+  cursor: pointer;
+}
+.actCont:first-child {
+  width: 300px;
+  height: 100%;
+}
+
+.actCont:nth-child(2) {
+  width: 300px;
+  height: 235px;
+}
+
+.actCont:nth-child(3) {
+  width: 300px;
+  height: 165px;
+}
+
+.actCont:first-child .actPhoto {
+  height: 390px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.actCont:nth-child(2) .actPhoto {
+  height: 180px;
+  border-radius: 20px 20px 0px 0px;
+}
+.actCont:last-child .actPhoto {
+  height: 115px;
+  border-radius: 20px 20px 0px 0px;
+}
+.actPhoto {
+  border-radius: 20px 20px 0px 0px;
+}
+
+.actDesc {
+  font-family: "Raleway-bold";
+  margin-left: 20px;
+}
+
+#vpPhoto {
+  background: url("media/images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg")
+    no-repeat;
+  background-size: 600px;
+  background-position: center;
+}
+
+#fpPhoto {
+  background: url("media/images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg")
+    no-repeat;
+  background-size: 300px;
+  background-position: center;
+}
+
+#ifPhoto {
+  background: url("media/images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg")
+    no-repeat;
+  background-size: 400px;
+  background-position: center;
+}
+
+#pncPhoto {
+  background: url("media/images/activites/1_xlarge/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg")
+    no-repeat;
+  background-size: 600px;
+  background-position: center;
+}
+
+#ndPhoto {
+  background: url("media/images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg")
+    no-repeat;
+  background-size: 500px;
+  background-position: 60% 20%;
+}
+
+#plPhoto {
+  background: url("media/images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg")
+    no-repeat;
+  background-size: 300px;
+  background-position: 50% 40%;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+  row-gap: 90px;
+  margin-top: 50px;
+  height: 220px;
+  background: #f2f2f2;
+}
+
+footer h1 {
+  font-family: "Raleway-semibold";
+  font-size: 16px;
+}
+
+footer a {
+  font-family: "Raleway-light";
+  text-decoration: none;
+  color: black;
+  line-height: 30px;
+}
+
+#aPropos {
+  margin-left: 50px;
+}
+
+#aPropos,
+#nosHebergements,
+#assistance {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
 }
