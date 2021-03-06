@@ -18,7 +18,10 @@
   font-family: "Raleway-light";
   src: url("media/fonts/static/Raleway-Light.ttf");
 }
-@media screen and (max-width: 900px) {
+
+@font-face {
+  font-family: "FontAwesome";
+  src: url("media/fonts/fontawesome-free-5.15.2-desktop/otfs/Font\ Awesome\ 5\ Free-Solid-900.otf");
 }
 
 html,
@@ -27,7 +30,7 @@ body {
 }
 
 body {
-  font-family: "Raleway";
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
 }
 
 #blocComplet {
@@ -627,3 +630,174 @@ footer a {
   flex-direction: column;
   margin-top: 40px;
 }
+
+/**************************************Media queries****************************************/
+
+/*@media screen and (max-width: 800px) {
+  #blocComplet {
+    width: auto;
+  }
+  #blocPage {
+    width: auto;
+  }
+  #logoNav {
+    width: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  #filtres,
+  #iFilters {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: auto;
+  }
+  #hebergements {
+    flex-direction: column-reverse;
+  }
+  #hebergementsMarseille {
+    width: auto;
+    height: auto;
+    flex-direction: column;
+  }
+  #actGeneral {
+    flex-direction: column;
+  }
+}*/
+
+@media all and (max-device-width: 480px) {
+  body {
+    width: auto;
+  }
+  #blocComplet {
+    border: 1px solid black;
+    width: 100vw;
+  }
+  #blocPage {
+    border: 1px dashed red;
+    width: 100vw;
+  }
+  /*
+  nav li,
+  nav ul,
+  nav a {
+    width: auto;
+    font-size: 2.3vh;
+  }*/
+  nav {
+    display: none;
+  }
+  header img {
+    width: 15vh;
+  }
+  header h1 {
+    margin-left: 5%;
+    text-align: left;
+    font-size: 3vh;
+  }
+  header h2 {
+    margin-left: 5%;
+    font-size: 1.5vw;
+  }
+
+  #zoneRecherche {
+    width: 100%;
+    margin-left: 5%;
+    font-size: 3vw;
+    height: 6vh;
+  }
+
+  #zoneRecherche i {
+    font-size: 4vw;
+    width: 8vw;
+  }
+
+  #zoneRecherche input:nth-child(2) {
+    font-size: 4vw;
+    width: 60vw;
+  }
+  #zoneRecherche input:nth-child(3) {
+    border-radius: 20px;
+    font-size: 4vw;
+    width: 15vw;
+    color: #0065fc;
+  }
+
+  #zoneRecherche input:nth-child(3)::after {
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 10px;
+    font-family: "FontAwesome";
+    content: "\f002";
+  }
+  #populaires {
+    width: 100%;
+  }
+
+  .popCont {
+    width: 90%;
+    height: 5em;
+  }
+
+  .popPhoto {
+    width: 30%;
+    height: 5em;
+  }
+
+  .popDesc {
+    width: 70%;
+  }
+
+  #filtres,
+  #iFilters {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: auto;
+  }
+  #hebergements {
+    flex-direction: column-reverse;
+  }
+  #hebergementsMarseille {
+    width: auto;
+    height: auto;
+    flex-direction: column;
+  }
+  #actGeneral {
+    width: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  #activitesP1,
+  #activitesP2 {
+    width: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+}
+/*
+@media screen and (max-width: 1100px) {
+  #blocComplet {
+    width: auto;
+  }
+  #blocPage {
+    width: 100%;
+  }
+  #filtres,
+  #iFilters {
+    justify-content: flex-start;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1335px) {
+  #blocComplet {
+    width: auto;
+  }
+  #blocPage {
+    width: auto;
+  }
+}
+*/
