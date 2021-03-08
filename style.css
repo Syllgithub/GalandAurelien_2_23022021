@@ -24,56 +24,65 @@
   src: url("media/fonts/fontawesome-free-5.15.2-desktop/otfs/Font\ Awesome\ 5\ Free-Solid-900.otf");
 }
 
-html,
 body {
   height: 100%;
 }
 
 body {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
-}
-
-#blocComplet {
-  width: 1440px;
+  width: 76%;
   margin: auto;
 }
 
 #blocPage {
-  width: 1335px;
+  width: 92%;
   margin: auto;
   margin-top: 20px;
 }
 
 #logoNav {
+  width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding-bottom: 25px;
+  margin-bottom: 30px;
 }
-
+nav {
+  order: 2;
+  width: 90%;
+}
 nav ul {
   list-style: none;
   display: flex;
+  justify-content: flex-end;
 }
 nav li {
   font-size: 16px;
-  margin-right: 60px;
+  margin-right: 50px;
+}
+#inscription {
+  padding-right: 20px;
+  order: 3;
 }
 nav a {
   text-decoration: none;
   color: #0065fc;
 }
 
-nav a:hover {
+nav a {
   padding-top: 33px;
-  border-top: 1px solid;
+  border-top: 2px solid;
 }
 
 nav li:nth-child(2) a {
   color: inherit;
+  border: 0;
 }
 
-nav li:nth-child(3) a {
+#inscription a {
   font-family: "Raleway-bold";
+  text-decoration: none;
+  color: #0065fc;
 }
 
 header h1 {
@@ -89,63 +98,76 @@ header h2 {
 #zoneRecherche {
   display: flex;
   justify-content: flex-start;
-  width: 40%;
-  padding-bottom: 20px;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-#zoneRecherche i {
+input::placeholder {
+  opacity: 1;
+  color: black;
+}
+
+#mapMarker {
   background-color: #f2f2f2;
-  width: 15px;
-  padding: 15px;
-  text-align: center;
-  border: 1px #f2f2f2 solid;
+  width: 50px;
+  height: 50px;
   border-radius: 15px 0px 0px 15px;
-  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #zoneRecherche input:nth-child(2) {
   width: 250px;
-  padding-left: 3%;
+  padding-left: 20px;
+  height: 50px;
   font-family: "Raleway-bold";
   border-top: 1px #f2f2f2 solid;
   border-bottom: 1px #f2f2f2 solid;
   border-left: 1px #f2f2f2 solid;
-  border-right: 0px;
+  border-right: 0;
   font-size: 16px;
 }
 
-#zoneRecherche input:nth-child(3) {
+#zoneRecherche button {
   width: 135px;
+  height: 50px;
   background-color: #0065fc;
   color: white;
   font-family: "Raleway-bold";
   font-size: 16px;
-  border: 1px #f2f2f2 solid;
+  border: 2px #0065fc solid;
   border-radius: 0px 15px 15px 0px;
   cursor: pointer;
 }
 
-#zoneRecherche input:nth-child(3):hover {
-  background-color: #deebff;
-  color: #0065fc;
+#zoneRecherche button:hover {
+  background: #004bbd;
+  border: 2px solid #004bbd;
+  color: #f1f1f1;
+}
+
+#zoneRecherche span:last-child {
+  display: none;
 }
 
 #zoneRecherche input:nth-child(2):focus,
-input:nth-child(3):focus {
+button:focus {
   outline: none;
 }
 
 #filtres {
   display: flex;
-  justify-content: space-between;
-
+  justify-content: flex-start;
   font-family: "Raleway-bold";
-  width: 70%;
 }
 
 #iFilters {
-  width: 90%;
+  margin-left: 25px;
+  width: 65%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -156,14 +178,14 @@ input:nth-child(3):focus {
 
 #filtres a {
   display: flex;
-  height: 36px;
+  height: 46px;
   align-items: center;
   text-decoration: none;
   color: black;
   border-top: 2px #d9d9d9 solid;
   border-right: 2px #d9d9d9 solid;
   border-bottom: 2px #d9d9d9 solid;
-  border-radius: 20px;
+  border-radius: 25px;
   padding-right: 20px;
 }
 
@@ -182,11 +204,11 @@ input:nth-child(3):focus {
   justify-content: center;
   align-items: center;
   margin-right: 10px;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   text-align: center;
   color: #0065fc;
-  border-radius: 20px;
+  border-radius: 25px;
   background-color: #deebff;
 }
 
@@ -219,15 +241,14 @@ input:nth-child(3):focus {
   font-size: 20px;
 }
 #hebergementsMarseille {
-  width: 880px;
-  height: 625px;
+  width: 66%;
   background: #f2f2f2;
   border-radius: 20px;
+  padding-bottom: 40px;
 }
 
 #populaires {
-  width: 420px;
-  height: 625px;
+  width: 31%;
   background: #f2f2f2;
   border-radius: 20px;
 }
@@ -482,7 +503,7 @@ input:nth-child(3):focus {
 
 #activites {
   margin-top: 60px;
-  height: 100%;
+  /*height: 100%;*/
 }
 
 #activites h1 {
@@ -491,7 +512,7 @@ input:nth-child(3):focus {
 }
 
 #actGeneral {
-  height: 50%;
+  /*height: 50%;*/
   display: flex;
   justify-content: space-between;
 }
@@ -631,6 +652,185 @@ footer a {
   margin-top: 40px;
 }
 
+@media only screen and (min-width: 321px) and (max-width: 799px) {
+  body {
+    padding: 0;
+    margin: 0;
+    width: auto;
+  }
+  #blocPage {
+    margin: 0;
+    width: auto;
+  }
+  #logoNav {
+    width: auto;
+    flex-wrap: wrap;
+  }
+  #logoNav img {
+    margin-left: 20px;
+  }
+  #inscription {
+    order: 2;
+    padding: 0;
+    padding-right: 10px;
+  }
+  nav {
+    order: 3;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+  nav li {
+    text-align: center;
+    margin: 0;
+    width: 50%;
+  }
+  nav a {
+    border: 0;
+  }
+
+  nav li:first-child {
+    padding-bottom: 15px;
+    border-bottom: 2.5px solid #0065fc;
+  }
+
+  nav li:last-child {
+    padding-bottom: 15px;
+    border-bottom: 2.5px solid #f2f2f2;
+  }
+
+  header h1,
+  h2,
+  h3 {
+    margin-left: 20px;
+  }
+  header h1 {
+    width: 80%;
+  }
+  #zoneRecherche {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    margin-left: 20px;
+  }
+  #zoneRecherche input:nth-child(2) {
+    width: 65%;
+    margin-right: -15px;
+  }
+
+  #zoneRecherche button {
+    width: 50px;
+    border-radius: 15px;
+  }
+  #zoneRecherche span:first-child {
+    display: none;
+  }
+  #zoneRecherche span:last-child {
+    display: block;
+  }
+
+  #filtres {
+    flex-direction: column;
+  }
+
+  #iFilters {
+    row-gap: 10px;
+    width: 90%;
+    flex-direction: row;
+  }
+
+  #informations {
+    margin-left: 20px;
+    width: auto;
+  }
+
+  #informations p {
+    display: flex;
+  }
+
+  #informations span {
+    width: 90%;
+  }
+
+  #hebergements {
+    flex-direction: column-reverse;
+  }
+
+  #hebergementsMarseille {
+    width: auto;
+    border-radius: 0;
+
+    background: white;
+  }
+
+  .hebCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+
+  .hebPhoto {
+    width: 100%;
+  }
+  .hebDesc {
+    width: 100%;
+  }
+  #populaires {
+    width: auto;
+    border-radius: 0;
+  }
+  #activites {
+    border: 1px solid red;
+  }
+  #actGeneral {
+    flex-direction: column;
+  }
+
+  #activitesP1,
+  #activitesP2 {
+    width: 100%;
+    height: auto;
+    border: 1px dashed blue;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .actCont:first-child {
+    width: 80%;
+  }
+  .actCont:nth-child(2) {
+    width: 300px;
+    height: 235px;
+  }
+
+  .actCont:nth-child(3) {
+    width: 300px;
+    height: 165px;
+  }
+  footer {
+    margin: 0;
+    padding: 0;
+    border: 1px dashed blue;
+    width: auto;
+    flex-direction: column;
+    height: auto;
+  }
+  #aPropos,
+  #nosHebergements,
+  #assistance {
+    margin: 0;
+    padding: 0;
+    width: auto;
+  }
+}
 /**************************************Media queries****************************************/
 
 /*@media screen and (max-width: 800px) {
@@ -665,25 +865,29 @@ footer a {
   }
 }*/
 
-@media all and (max-device-width: 480px) {
+/*@media all and (max-device-width: 480px) {
   body {
     width: auto;
   }
   #blocComplet {
     border: 1px solid black;
     width: 100vw;
+    margin: 0;
+    padding: 0;
   }
   #blocPage {
     border: 1px dashed red;
     width: 100vw;
+    margin: 0;
+    padding: 0;
   }
-  /*
+
   nav li,
   nav ul,
   nav a {
     width: auto;
     font-size: 2.3vh;
-  }*/
+  }
   nav {
     display: none;
   }
@@ -723,14 +927,6 @@ footer a {
     color: #0065fc;
   }
 
-  #zoneRecherche input:nth-child(3)::after {
-    position: absolute;
-    color: white;
-    top: 0;
-    left: 10px;
-    font-family: "FontAwesome";
-    content: "\f002";
-  }
   #populaires {
     width: 100%;
   }
@@ -775,6 +971,10 @@ footer a {
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
+  }
+
+  footer {
+    flex-direction: column;
   }
 }
 /*
