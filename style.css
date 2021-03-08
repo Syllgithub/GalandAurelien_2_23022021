@@ -18,11 +18,14 @@
   font-family: "Raleway-light";
   src: url("media/fonts/static/Raleway-Light.ttf");
 }
-@media screen and (max-width: 900px) {
+
+@font-face {
+  font-family: "FontAwesome";
+  src: url("media/fonts/fontawesome-free-5.15.2-desktop/otfs/Font\ Awesome\ 5\ Free-Solid-900.otf");
 }
 
 body {
-  font-family: "Raleway";
+  height: 100%;
 }
 
 body {
@@ -187,6 +190,7 @@ button:focus {
 }
 
 #filtres a:hover {
+  transition: all 0.3s ease-out;
   color: white;
   background-color: #0065fc;
   border-top: 2px #deebff solid;
@@ -258,6 +262,7 @@ button:focus {
 }
 
 .hebCont:hover {
+  transition: all 0.4s ease-out;
   box-shadow: 0px 0px 10px grey;
   border-radius: 20px;
   cursor: pointer;
@@ -398,17 +403,26 @@ button:focus {
 }
 
 #popGeneral {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 500px;
+  row-gap: 30px;
 }
 
 .popCont {
   display: flex;
-  border: 1px solid black;
   justify-content: center;
+  width: 345px;
+  margin: auto;
+  box-shadow: 0px 0px 10px #d9d9d9;
+  border-radius: 20px;
+}
+
+.popCont:hover {
+  transition: all 0.4s ease-out;
+  box-shadow: 0px 0px 20px grey;
+  cursor: pointer;
 }
 
 .popDesc p {
@@ -416,35 +430,45 @@ button:focus {
   padding: 0;
 }
 .popDesc p:nth-child(1) {
-  border: 1px solid black;
+  padding-top: 15px;
+  font-size: 15px;
+  padding-left: 5px;
   font-family: "Raleway-bold";
 }
 
 .popDesc p:nth-child(2) {
-  border: 1px solid black;
+  padding-left: 5px;
   font-family: "Raleway-light";
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 30px;
 }
 
 .popPhoto {
   border: 5px solid white;
   border-radius: 20px 0px 0px 20px;
   width: 130px;
-  height: 135px;
+  height: 130px;
 }
 
 .popDesc {
   display: flex;
   flex-direction: column;
-  align-content: flex-start;
+  justify-content: flex-start;
   background: white;
   width: 210px;
-  height: 145px;
+  height: 140px;
   border-radius: 0px 20px 20px 0px;
 }
 
-.popCont div:last-child {
-  align-self: flex-end;
+.popCont strong {
+  font-family: "Raleway-semibold";
+}
+
+.popCont div {
+  margin-top: auto;
+  padding-left: 5px;
+
+  padding-bottom: 5px;
 }
 
 #solmPhoto {
