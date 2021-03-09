@@ -25,11 +25,8 @@
 }
 
 body {
-  height: 100%;
-}
-
-body {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
+  height: 100%;
   width: 76%;
   margin: auto;
 }
@@ -37,7 +34,7 @@ body {
 #blocPage {
   width: 92%;
   margin: auto;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 #logoNav {
@@ -651,8 +648,10 @@ footer a {
   flex-direction: column;
   margin-top: 40px;
 }
-
-@media only screen and (min-width: 321px) and (max-width: 799px) {
+footer a:hover {
+  color: #0065fc;
+}
+@media only screen and (max-width: 480px) {
   body {
     padding: 0;
     margin: 0;
@@ -765,7 +764,6 @@ footer a {
   #hebergementsMarseille {
     width: auto;
     border-radius: 0;
-
     background: white;
   }
 
@@ -785,9 +783,29 @@ footer a {
   #populaires {
     width: auto;
     border-radius: 0;
+    padding-bottom: 30px;
+  }
+  #titreIconePop h2 {
+    margin: 0;
+    padding: 0;
+  }
+  #titreIconePop {
+    width: 90%;
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .popCont {
+    width: 90%;
   }
   #activites {
-    border: 1px solid red;
+    margin: 0;
+  }
+  #activites h1 {
+    margin-bottom: 40px;
+    margin-left: 40px;
   }
   #actGeneral {
     flex-direction: column;
@@ -797,31 +815,40 @@ footer a {
   #activitesP2 {
     width: 100%;
     height: auto;
-    border: 1px dashed blue;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
+    margin-bottom: 40px;
   }
 
-  .actCont:first-child {
-    width: 80%;
+  .actCont:nth-child(2),
+  .actCont:last-child {
+    height: 100%;
   }
-  .actCont:nth-child(2) {
-    width: 300px;
-    height: 235px;
+  .actCont:first-child .actPhoto {
+    height: 120px;
+  }
+  .actCont:nth-child(2) .actPhoto {
+    height: 120px;
+  }
+  .actCont:last-child .actPhoto {
+    height: 120px;
   }
 
-  .actCont:nth-child(3) {
-    width: 300px;
-    height: 165px;
+  .actCont .actPhoto {
+    height: 120px;
+    border-radius: 20px 20px 0px 0px;
   }
   footer {
     margin: 0;
     padding: 0;
-    border: 1px dashed blue;
     width: auto;
     flex-direction: column;
+    justify-content: space-around;
     height: auto;
+    row-gap: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   #aPropos,
   #nosHebergements,
@@ -829,6 +856,86 @@ footer a {
     margin: 0;
     padding: 0;
     width: auto;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1366px) {
+  body {
+    width: 98%;
+  }
+  #blocPage {
+    width: 98%;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1300px) {
+  body {
+    width: auto;
+  }
+  #blocPage {
+    width: auto;
+  }
+  #iFilters {
+    row-gap: 10px;
+  }
+  #hebergements {
+    border: 1px solid red;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  #populaires {
+    height: auto;
+    width: auto;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+  #popGeneral {
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #hebergementsMarseille {
+    width: auto;
+  }
+
+  .hebCont {
+    border: 1px dashed red;
+    border-bottom: 1px solid blue;
+    display: flex;
+    height: 120px;
+    width: 350px;
+    box-shadow: 0 0 5px #d9d9d9;
+    border-radius: 20px;
+  }
+
+  .hebPhoto {
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    border: 5px solid white;
+    box-shadow: 0 0 0 0;
+  }
+  .hebDesc {
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 0 0 0 0;
+  }
+  #activites {
+    border: 1px dashed blue;
+    width: 100%;
+  }
+  #actGeneral {
+    border: 1px solid red;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #activitesP1,
+  #activitesP2 {
+    width: 50%;
+    border: 1px dashed violet;
   }
 }
 /**************************************Media queries****************************************/
