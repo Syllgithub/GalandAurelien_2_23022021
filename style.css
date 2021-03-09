@@ -25,11 +25,8 @@
 }
 
 body {
-  height: 100%;
-}
-
-body {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
+  height: 100%;
   width: 76%;
   margin: auto;
 }
@@ -37,7 +34,7 @@ body {
 #blocPage {
   width: 92%;
   margin: auto;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 #logoNav {
@@ -651,7 +648,9 @@ footer a {
   flex-direction: column;
   margin-top: 40px;
 }
-
+footer a:hover {
+  color: #0065fc;
+}
 @media only screen and (max-width: 480px) {
   body {
     padding: 0;
@@ -858,6 +857,85 @@ footer a {
     padding: 0;
     width: auto;
     margin-left: 40px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1366px) {
+  body {
+    width: 98%;
+  }
+  #blocPage {
+    width: 98%;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1300px) {
+  body {
+    width: auto;
+  }
+  #blocPage {
+    width: auto;
+  }
+  #iFilters {
+    row-gap: 10px;
+  }
+  #hebergements {
+    border: 1px solid red;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  #populaires {
+    height: auto;
+    width: auto;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+  #popGeneral {
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #hebergementsMarseille {
+    width: auto;
+  }
+
+  .hebCont {
+    border: 1px dashed red;
+    border-bottom: 1px solid blue;
+    display: flex;
+    height: 120px;
+    width: 350px;
+    box-shadow: 0 0 5px #d9d9d9;
+    border-radius: 20px;
+  }
+
+  .hebPhoto {
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    border: 5px solid white;
+    box-shadow: 0 0 0 0;
+  }
+  .hebDesc {
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 0 0 0 0;
+  }
+  #activites {
+    border: 1px dashed blue;
+    width: 100%;
+  }
+  #actGeneral {
+    border: 1px solid red;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #activitesP1,
+  #activitesP2 {
+    width: 50%;
+    border: 1px dashed violet;
   }
 }
 /**************************************Media queries****************************************/
