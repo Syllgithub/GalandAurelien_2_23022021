@@ -19,19 +19,15 @@
   src: url("media/fonts/static/Raleway-Light.ttf");
 }
 
-@font-face {
-  font-family: "FontAwesome";
-  src: url("media/fonts/fontawesome-free-5.15.2-desktop/otfs/Font\ Awesome\ 5\ Free-Solid-900.otf");
-}
-
 body {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   height: 100%;
-  width: 76%;
+  width: 1440px;
   margin: auto;
 }
 
 #blocPage {
+  transition: all 250ms ease-in-out;
   width: 92%;
   margin: auto;
   padding-top: 20px;
@@ -44,6 +40,7 @@ body {
   justify-content: space-between;
   margin-bottom: 30px;
 }
+
 nav {
   order: 2;
   width: 90%;
@@ -226,6 +223,7 @@ button:focus {
 }
 
 #hebergements {
+  transition: all 250ms ease-in-out;
   display: flex;
   justify-content: space-between;
 }
@@ -238,6 +236,7 @@ button:focus {
   font-size: 20px;
 }
 #hebergementsMarseille {
+  transition: all 250ms ease-in-out;
   width: 66%;
   background: #f2f2f2;
   border-radius: 20px;
@@ -245,12 +244,14 @@ button:focus {
 }
 
 #populaires {
+  transition: all 250ms ease-in-out;
   width: 31%;
   background: #f2f2f2;
   border-radius: 20px;
 }
 
 #hebGeneral {
+  transition: all 250ms ease-in-out;
   flex-wrap: wrap;
   display: flex;
   justify-content: space-evenly;
@@ -400,6 +401,7 @@ button:focus {
 }
 
 #popGeneral {
+  transition: all 250ms ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -530,6 +532,8 @@ button:focus {
   border-radius: 20px;
   box-shadow: 0px 0px 20px #d9d9d9;
   cursor: pointer;
+  /**/
+  width: 300px;
 }
 .actCont:hover {
   transition: all 0.4s ease-out;
@@ -537,17 +541,27 @@ button:focus {
   cursor: pointer;
 }
 .actCont:first-child {
-  width: 300px;
+  /*width: 300px;*/
   height: 100%;
 }
 
 .actCont:nth-child(2) {
-  width: 300px;
+  /* width: 300px;*/
   height: 235px;
 }
 
+#activitesP2 .actCont:nth-child(2),
+#activitesP2 .actCont:nth-child(3) {
+  height: 200px;
+}
+
+#activitesP2 .actCont:nth-child(2) .actPhoto,
+#activitesP2 .actCont:nth-child(3) .actPhoto {
+  height: 150px;
+}
+
 .actCont:nth-child(3) {
-  width: 300px;
+  /*width: 300px;*/
   height: 165px;
 }
 
@@ -572,6 +586,12 @@ button:focus {
   font-family: "Raleway-bold";
   margin-left: 20px;
 }
+.actDesc p {
+  white-space: nowrap;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 #vpPhoto {
   background: url("media/images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg")
@@ -583,7 +603,7 @@ button:focus {
 #fpPhoto {
   background: url("media/images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg")
     no-repeat;
-  background-size: 300px;
+  background-size: cover;
   background-position: center;
 }
 
@@ -611,7 +631,7 @@ button:focus {
 #plPhoto {
   background: url("media/images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg")
     no-repeat;
-  background-size: 300px;
+  background-size: cover;
   background-position: 50% 40%;
 }
 
@@ -653,11 +673,13 @@ footer a:hover {
 }
 @media only screen and (max-width: 480px) {
   body {
+    transition: all 250ms ease-in-out;
     padding: 0;
     margin: 0;
     width: auto;
   }
   #blocPage {
+    transition: all 250ms ease-in-out;
     margin: 0;
     width: auto;
   }
@@ -800,6 +822,12 @@ footer a:hover {
   .popCont {
     width: 90%;
   }
+  .popPhoto {
+    width: 35%;
+  }
+  .popDesc {
+    width: 65%;
+  }
   #activites {
     margin: 0;
   }
@@ -860,7 +888,7 @@ footer a:hover {
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 1366px) {
+@media screen and (min-width: 480px) and (max-width: 1440px) {
   body {
     width: 98%;
   }
@@ -871,16 +899,15 @@ footer a:hover {
 
 @media screen and (min-width: 480px) and (max-width: 1300px) {
   body {
-    width: auto;
+    width: 100%;
   }
   #blocPage {
-    width: auto;
+    width: 100%;
   }
   #iFilters {
     row-gap: 10px;
   }
   #hebergements {
-    border: 1px solid red;
     flex-direction: column-reverse;
     justify-content: space-between;
   }
@@ -892,6 +919,7 @@ footer a:hover {
     margin-bottom: 30px;
   }
   #popGeneral {
+    width: auto;
     height: auto;
     flex-direction: row;
     flex-wrap: wrap;
@@ -902,11 +930,10 @@ footer a:hover {
   }
 
   .hebCont {
-    border: 1px dashed red;
-    border-bottom: 1px solid blue;
     display: flex;
     height: 120px;
-    width: 350px;
+    width: 30%;
+    min-width: 250px;
     box-shadow: 0 0 5px #d9d9d9;
     border-radius: 20px;
   }
@@ -922,22 +949,114 @@ footer a:hover {
     border-radius: 0 20px 20px 0;
     box-shadow: 0 0 0 0;
   }
-  #activites {
-    border: 1px dashed blue;
-    width: 100%;
+
+  .popCont {
+    width: 30%;
+    min-width: 240px;
   }
+
   #actGeneral {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  /* #actGeneral {
     border: 1px solid red;
     width: 100%;
     flex-wrap: wrap;
-    justify-content: center;
-  }
-  #activitesP1,
+    justify-content: flex-start;
+  }*/
+  /*#activitesP1,
   #activitesP2 {
     width: 50%;
-    border: 1px dashed violet;
+    border: 1px dashed violet;*/
+
+  #activitesP1,
+  #activitesP2 {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .actCont {
+    width: 30%;
+    min-width: 200px;
+  }
+  .actCont:first-child {
+    height: 165px;
+  }
+  .actCont:nth-child(2) {
+    height: 165px;
+  }
+  .actCont:nth-child(3) {
+    height: 165px;
+  }
+
+  .actCont:first-child .actPhoto {
+    height: 120px;
+  }
+  .actCont:nth-child(2) .actPhoto {
+    height: 120px;
+  }
+  .actCont:last-child .actPhoto {
+    height: 120px;
+  }
+
+  #activitesP2 .actCont:nth-child(2),
+  #activitesP2 .actCont:nth-child(3) {
+    height: 165px;
+  }
+  #activitesP2 .actCont:nth-child(2) .actPhoto,
+  #activitesP2 .actCont:nth-child(3) .actPhoto {
+    height: 120px;
+  }
+
+  .actCont .actPhoto {
+    height: 120px;
+    border-radius: 20px 20px 0px 0px;
   }
 }
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  #popGeneral {
+    flex-direction: column;
+  }
+  br {
+    display: none;
+  }
+  .popCont {
+    transition: all 250ms ease-in-out;
+    width: 90%;
+  }
+  .popPhoto {
+    transition: all 250ms ease-in-out;
+    width: 35%;
+  }
+  .popDesc {
+    transition: all 250ms ease-in-out;
+    width: 65%;
+  }
+  #hebGeneral {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .hebCont {
+    min-width: none;
+    width: 90%;
+  }
+  .hebDesc {
+    width: 90%;
+  }
+  .hebCont {
+    width: 90%;
+  }
+}
+
 /**************************************Media queries****************************************/
 
 /*@media screen and (max-width: 800px) {
