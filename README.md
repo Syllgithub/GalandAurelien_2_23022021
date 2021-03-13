@@ -1,1 +1,3 @@
-GalandAurelien_2_23022021
+Projet 2 Parcours développeur Web OpenClassrooms
+Site Reservia
+Galand Aurélien
