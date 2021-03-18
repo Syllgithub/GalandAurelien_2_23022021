@@ -6,7 +6,7 @@
 * Trouvez un hébergement ou une activité dans la ville de votre choix 
 * Filtrez vos choix
 ***
-<img src="https://user.oc-static.com/upload/2020/08/24/1598262857804_Maquette%20reservia-min.png"  width=500px />
+<img src="https://user.oc-static.com/upload/2020/08/24/1598262857804_Maquette%20reservia-min.png"  width=600px />
 
 ***
 ## Lien de l'hébergement 
